@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index 화면</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <style>
+        #search_input {
+            height: 55px;
+            background-image: url(./image/search.png);
+            background-repeat: no-repeat;
+            background-position: calc(100% - 20px) center;
+            background-size: 30px;
+            border-color: white;
+            padding-left: 20px;
+        }
+
+        #search_input:focus {
+            /* outline: 2px solid #f2c6f9 !important; */
+            outline: none;
+            box-shadow: none;
+        }
+
+        #search_input:hover {
+            /* outline: 1px solid #f2c6f9; */
+            border-color: gainsboro;
+        }
+
+        li>a>img {
+            display: block;
+            margin: auto;
+            padding-bottom: 3px;
+
+        }
+
+        /* 모달이 커지는 애니메이션 */
+        @keyframes grow {
+            0% {
+                transform: scale(0.5);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* 모달에 애니메이션 적용 */
+        .grow-modal .modal-content {
+            animation: grow 0.5s ease;
+        }
+
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'LeeSeoyun';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Ownglyph_kimkonghae';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/Ownglyph_kimkonghae.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        input::-ms-clear,
+        input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        input::-webkit-search-decoration,
+        input::-webkit-search-cancel-button,
+        input::-webkit-search-results-button,
+        input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        body {
+            font-family: 'GmarketSansMedium';
+        }
+
+        p {
+            font-family: 'LeeSeoyun';
+        }
+
+        #subtitle {
+            font-family: 'Ownglyph_kimkonghae';
+            font-size: 25px;
+        }
+
+        .modal-title {
+            font-family: 'Ownglyph_kimkonghae';
+            padding-top: 8px;
+            font-size: 40px;
+            margin: 0 auto;
+            text-align: center;
+            position: absolute;
+            top: 3.6%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('header').load('header.html');
+            $('main').load('main.html');
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header style="height: 10vh;"></header>
+        <main style="height: 10vh;"></main>
+    </div>
+</body>
+
+</html>
