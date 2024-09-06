@@ -1,36 +1,86 @@
-<div style="text-align: center; margin-top: 60px; z-index: 1">
-    <div style="position: absolute; z-index: 2; top: 50%; left: 43%;">
-        <img src="./image/marker.png" alt="" width="50px" class="marker" data-bs-toggle="modal"
-            data-bs-target="#exampleModal">
+<main>
+    <div style="text-align: center; margin-top: 60px; position: relative;">
+        <div style="position: absolute; z-index: 2; top: 40%; left: 43%;">
+            <img src="./image/marker.png" alt="마커" width="50px" class="marker" data-bs-toggle="modal"
+                data-bs-target="#tavel_modal">
+        </div>
+        <img src="./image/map.png" alt="지도">
     </div>
-    <img src="./image/map.png" alt="">
-</div>
-<div class="modal" tabindex="-1" id="exampleModal" style="position: absolute;">
-    <div class="modal-dialog grow-modal"
-        style="position: fixed; top: 50%; left: 10%; transform: translateY(-53.3%); width: 500px;">
-        <div class="modal-content rounded-5" style="height: 900px;">
-            <div class="modal-header align-items-center" style="height: 70px;">
-                <h5 class="modal-title">500일 기념 여행</h5>
-            </div>
-            <div class="modal-body" id="subtitle" style="position: relative;">
-                <div style="text-align: center;">-우리둘이 숨바꼭질♥-</div>
-                <img src="image/refactor.png" alt="" width="30px" height="30px"
-                    style="position: absolute; right: 3%; top: 4%; transform: translateY(-50%);">
-                <div>
-                    <img src="image/run.png" alt="" width="300px"
-                        style="border-radius: 20px; display: block; margin: 10px auto;">
+    <!-- 마커 모달 -->
+    <div class="modal" id="tavel_modal">
+        <div class="modal-dialog grow-modal" id="travel_modal_size">
+            <div class="modal-content rounded-5" style="height: 900px;">
+                <div class="modal-header" style="height: 70px;">
+                    <h5 class="modal-title">500일 기념 여행</h5>
                 </div>
-                <div>
-                    위치: 태안 해식동굴
-                </div>
-                <div>
-                    날짜: 2024.06.27
-                </div>
-                <div class="additional-box mt-2 rounded-5"
-                    style="border: 1px solid #ddd; padding: 20px; background-color: #fafafa; height: 260px;">
-                    <p>500일 기념으로 서해 바다로 놀러갔다왔어! 해안 동굴이 너무 동화같이 예뻤어!
-                        사람도 진짜 많아서 사진 찍기 힘들었다ㅋㅋ</p>
+                <div class="modal-body" id="subtitle">
+                    <div class="d-flex justify-content-center position-relative">
+                        <div>-우리둘이 숨바꼭질♥-</div>
+                        <img src="image/refactor.png" alt="수정/삭제 " width="30px" height="30px" id="modal_refactor">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <img src="image/run.png" alt="사진" width="300px" id="photo">
+                    </div>
+                    <div>
+                        <p id="location">위치: 태안 해식동굴</p>
+                    </div>
+                    <div>
+                        <p id="date">날짜: 2024.06.27</p>
+                    </div>
+                    <div class="additional-box mt-2 rounded-5" id="content">
+                        <p>500일 기념으로 서해 바다로 놀러갔다왔어! 해안 동굴이 너무 동화같이 예뻤어!
+                            사람도 진짜 많아서 사진 찍기 힘들었다ㅋㅋ</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- 모달 영역 -->
+    <div class="modal fade" id="login_modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="height: 490px;">
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center mt-2">
+                        <img src="./image/Jjang.jpg" alt="로고" style="width: 50px; height: 50px;">
+                    </div>
+                    <br>
+                    <form>
+                        <div>
+                            <input type="text" class="form-control" id="id_input" placeholder="아이디">
+                        </div>
+                        <div>
+                            <input type="password" class="form-control" id="pw_input" placeholder="비밀번호"></input>
+                        </div>
+                        <div class="pt-3">
+                            <input class="form-check-input" type="checkbox" id="save_id">
+                            <label for="save_id" class="align-bottom" style="margin-left: 10px; margin-top: 2px;">자동 로그인</label>
+                        </div>
+                        <div id="login_btn">
+                            <button id="login_submit" class="btn">
+                                <p style="margin: 0; padding-top: 4px;">로그인</p>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="d-flex justify-content-center mt-3" id="account_option">
+                        <a href="">
+                            <p>아이디 찾기</p>
+                        </a>
+                        <p>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</p>
+                        <a href="">
+                            <p>비밀번호 재설정</p>
+                        </a>
+                        <p>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</p>
+                        <a href="">
+                            <p>회원 가입</p>
+                        </a>
+                    </div>
+                    <hr style="margin-left: 30px; margin-right: 30px;">
+                    <div class="d-flex justify-content-center">
+                        <img src="/image/login.png" alt="로그인 버튼" style="margin-top: 5px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

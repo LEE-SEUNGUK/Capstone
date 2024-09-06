@@ -108,6 +108,35 @@
             font-style: normal;
         }
 
+        /* 여기부터 */
+        @font-face {
+            font-family: 'UhBeeZZIBA-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/UhBeeZZIBA-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Dongle-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108_2@1.0/Dongle-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'KOMACON';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/KOMACON.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Dovemayo-Medium';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/Dovemayo-Medium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         body {
             font-family: 'GmarketSansMedium';
         }
@@ -269,14 +298,14 @@
     <header>
         <div class="px-4" style="background-color: rgb(247, 240, 240);">
             <div class="container-fluid">
-                <div class="d-flex flex-wrap align-items-center justify-content-between" id="header_nav">
+                <div class="d-flex flex-wrap align-items-center justify-content-between" id="header_nav" style="position: relative;">
                     <a href="#" class="nav-link" id="nav_logo" style="margin-left: 30px;">
-                        <img src="./image/logo.png" alt="로고 버튼" width="80" height="80">
+                        <h1 style="color: black; font-family: LeeSeoyun; font-weight: 500;">DuriMoa</h1>
                     </a>
 
                     <p class="my-auto" id="couple_name">말랑쫀득♥ 여행 일기</p>
 
-                    <form class="w-25 col-lg-auto">
+                    <form class="w-25 col-lg-auto" style="position: absolute; left: 50%; transform: translateX(-50%);">
                         <input type="search" class="form-control rounded-pill" placeholder="여행지를 입력하세요"
                             id="search_input">
                     </form>
@@ -316,76 +345,7 @@
     </header>
 
     <main>
-        <div style="text-align: center; margin-top: 60px; position: relative;">
-            <div style="position: absolute; z-index: 2; top: 40%; left: 43%;">
-                <img src="./image/marker.png" alt="마커" width="50px" class="marker" data-bs-toggle="modal"
-                    data-bs-target="#tavel_modal">
-            </div>
-            <img src="./image/map.png" alt="지도">
-        </div>
-        <!-- 마커 모달 -->
-        <div class="modal" id="tavel_modal">
-            <div class="modal-dialog grow-modal" id="travel_modal_size">
-                <div class="modal-content rounded-5" style="height: 900px;">
-                    <div class="modal-header" style="height: 70px;">
-                        <h5 class="modal-title">500일 기념 여행</h5>
-                    </div>
-                    <div class="modal-body" id="subtitle">
-                        <div class="d-flex justify-content-center position-relative">
-                            <div>-우리둘이 숨바꼭질♥-</div>
-                            <img src="image/refactor.png" alt="수정/삭제 " width="30px" height="30px" id="modal_refactor">
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <img src="image/run.png" alt="사진" width="300px" id="photo">
-                        </div>
-                        <div>
-                            <p id="location">위치: 태안 해식동굴</p>
-                        </div>
-                        <div>
-                            <p id="date">날짜: 2024.06.27</p>
-                        </div>
-                        <div class="additional-box mt-2 rounded-5" id="content">
-                            <p>500일 기념으로 서해 바다로 놀러갔다왔어! 해안 동굴이 너무 동화같이 예뻤어!
-                                사람도 진짜 많아서 사진 찍기 힘들었다ㅋㅋ</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 모달 영역 -->
-        <div class="modal fade" id="login_modal">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content" style="height: 500px;">
-                    <div class="modal-body">
-                        <div class="d-flex justify-content-center mt-2">
-                            <img src="./image/Jjang.jpg" alt="로고" style="width: 50px; height: 50px;">
-                        </div>
-                        <br>
-                        <form>
-                            <div>
-                                <input type="text" class="form-control" id="id_input" placeholder="아이디">
-                            </div>
-                            <div>
-                                <input type="password" class="form-control" id="pw_input" placeholder="비밀번호"></input>
-                            </div>
-                            <div class="pt-3">
-                                <input class="form-check-input" type="checkbox" id="save_id">
-                                <span class="align-bottom">아이디 저장</span>
-                            </div>
-                            <div id="login_btn">
-                                <button id="login_submit" class="btn">
-                                    <span>로그인</span>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
     </main>
-    <footer>
-    </footer>
 </body>
 <script>
 </script>

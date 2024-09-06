@@ -1,0 +1,98 @@
+input::-ms-clear,
+input::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+    display: none;
+}
+
+#search_input {
+    height: 55px;
+    background-image: url(../image/search.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px) center;
+    background-size: 30px;
+    border-color: white;
+    padding-left: 20px;
+}
+
+#search_input:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: gray;
+}
+
+#search_input:hover {
+    border-color: gray;
+}
+
+.nav-text {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0s 0.5s;
+    /* opacity 변화와 visibility 딜레이 설정 */
+}
+
+/* nav-item에 마우스를 올렸을 때 패딩과 텍스트 애니메이션 */
+.nav-item {
+    transition: padding 0.5s ease;
+    /* 패딩 변화를 부드럽게 */
+}
+
+.nav-item:hover {
+    padding-bottom: 20px;
+    /* 텍스트를 위한 패딩 추가 */
+}
+
+.nav-item:hover .nav-text {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    /* 텍스트가 나타날 때 애니메이션 */
+}
+
+#couple_name {
+    margin-left: 50px;
+    font-size: 30px;
+}
+
+ul.nav span {
+    color: rgb(0, 0, 0);
+}
+
+li a img {
+    display: block;
+    margin: auto;
+    padding-bottom: 3px;
+}
+
+#my_page {
+    padding-top: 10px;
+    margin-top: 4px;
+}
+
+#board {
+    margin-top: 10px;
+}
+
+#my_trip {
+    margin-top: 10px
+}
+
+#photo_zone {
+    margin-top: 6px
+}
+
+ul li {
+    margin-left: 30px;
+}
+
+#couple_name {
+    font-family: 'LeeSeoyun';
+}
